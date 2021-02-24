@@ -4,8 +4,8 @@ import { pokedexService } from "../Services/PokedexService.js"
 function _draw(){
     let pokemon = ProxyState.pokemonArr
     let template = ""
-    pokemon.forEach(s => template += `<li onclick="app.PokedexController.setActiveSpell('${s.index}')"> ${s.name} </li>`)
-    document.getElementById("pokemon").innerHTML =template;
+    pokemon.forEach(p => template )//+=`<li onclick="app.pokedexController.setActiveSpell('${p.index}')"> ${p.name} </li>`)
+    document.getElementById("pokemonDex").innerHTML =template;
 
 }
 
