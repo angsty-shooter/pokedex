@@ -1,8 +1,9 @@
 import { ProxyState } from "../AppState.js";
+import Pokemon from "../Models/Pokedex.js";
 import { api } from "./AxiosService.js";
 
+
 class PokedexService {
-    
 
     constructor(){
         console.log("pokedex service")
@@ -12,7 +13,7 @@ class PokedexService {
     async getPokemon(){
         try {
             const res = await api.get('pokemon')
-            ProxyState.pokemon = res.data.map(rawPokemon => new rawPokemon(rawPokemon))
+            ProxyState.pokemonArr = res.data.map(rawPokemon => new Pokemon(rawPokemon))
         } catch (error) {
             console.error(error)
         }
