@@ -1,4 +1,4 @@
-import Pokemon from "./Models/Pokedex.js"
+import Pokemon from "./Models/Pokemon.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 

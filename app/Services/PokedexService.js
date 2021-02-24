@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import Pokemon from "../Models/Pokedex.js";
+import Pokemon from "../Models/Pokemon.js";
 import { api } from "./AxiosService.js";
 
 
@@ -13,7 +13,7 @@ class PokedexService {
     async getPokemon(){
         try {
             const res = await api.get("")
-            console.log(res)
+            //console.log(res)
             ProxyState.pokemonArr = res.data.results
         } catch (error) {
             console.error(error)
