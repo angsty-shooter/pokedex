@@ -12,6 +12,7 @@ function _draw(){
 export default class PokedexController{
     constructor(){
         console.log("pokedex controller")
+        ProxyState.on("pokemonArr", _draw)
         _draw()
     }
 }

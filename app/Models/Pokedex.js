@@ -1,9 +1,9 @@
 
 export default class Pokemon{
-    constructor({name, types, front_default, sprites}){
+    constructor({name, types, sprites: front_default}){
         this.name = name
         this.types = types
-        this.front_default = front_default
+        this.sprites = front_default
         // this.sprites = sprites
 
     }
