@@ -20,15 +20,15 @@ class PokedexService {
         }
     }
 
-    // async setActivePokemon(index){
-    //     try {
-    //         const res = await api.get(index)
-    //         console.log(res)
-    //         ProxyState.activePokemon = new Pokemon(res.data)
-    //     } catch (error) {
-            
-    //     }
-    // }
+     async setActivePokemon(index){
+         try {
+             const res = await api.get(index)
+             //console.log(res)
+             ProxyState.activePokemon = new Pokemon(res.data)
+         } catch (error) {
+            console.error(error)
+         }
+    }
 }
 
 export const pokedexService = new PokedexService()

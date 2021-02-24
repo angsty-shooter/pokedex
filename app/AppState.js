@@ -6,8 +6,8 @@ class AppState extends EventEmitter {
   /** @type {Pokemon[]} */
   pokemonArr = []
 
-  /** @type {Pokemon[]} */
-  activePokemon = []
+  /** @type {Pokemon} */
+  activePokemon = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {
