@@ -26,7 +26,6 @@ export default class PokedexController{
     }
 
     setActivePokemon(name){
-        console.log(name)
         pokedexService.setActivePokemon(name)
     }
 }

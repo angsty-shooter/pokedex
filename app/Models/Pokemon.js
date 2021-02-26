@@ -5,6 +5,7 @@ export default class Pokemon{
         this.types = data.types
         this.img = data.img || data.sprites.front_default
         this.weight = data.weight
+        this.height = data.height
     }
 
     get Template() {
@@ -14,6 +15,7 @@ export default class Pokemon{
             <div class="card-body">
                 <h4 class="card-title">${this.name}</h4>
                 <p class="card-text">Type: ${this.pTypes}</p>
+                <p class="card-text">Height: ${this.height}</p>
                 <p class="card-text">Weight: ${this.weight}</p>
             </div>
             ${this.Buttons}
@@ -27,14 +29,8 @@ export default class Pokemon{
     }
 
     get Buttons(){
-        if(this.isCaught){
           return /*html*/ `
-          <button class="btn btn-danger" onclick="app.caughtPokemonController.releasePokemon()">Release Pokemon</button>
+          <button class="btn btn-danger">Capture</button>
           `
-        } else {
-          return /*html*/ `
-          <button class="btn btn-success" onclick="app.caughtPokemonController.catchPokemon()">Catch Pokemon</button>
-          `
-        }
       }
 }
