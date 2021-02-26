@@ -13,15 +13,28 @@ export default class Pokemon{
         <img class="card-img-top" src="${this.img}" alt="">
             <div class="card-body">
                 <h4 class="card-title">${this.name}</h4>
-                <p class="card-text">Type: ${this.Types}</p>
+                <p class="card-text">Type: ${this.pTypes}</p>
                 <p class="card-text">Weight: ${this.weight}</p>
             </div>
-            <button class="btn btn-info" onclick="app.">Capture</button>
+            ${this.Buttons}
         </div>`
     }
 
-    get Types(){
-        let template = ""
-        this.types.array.forEach(elem => template += elem.type.name);
+    get pTypes(){
+        let template = ''
+        this.types.forEach(t => template += t.type.name + ' ')
+        return template
     }
+
+    get Buttons(){
+        if(this.isCaught){
+          return /*html*/ `
+          <button class="btn btn-danger" onclick="app.caughtPokemonController.releasePokemon()">Release Pokemon</button>
+          `
+        } else {
+          return /*html*/ `
+          <button class="btn btn-success" onclick="app.caughtPokemonController.catchPokemon()">Catch Pokemon</button>
+          `
+        }
+      }
 }
