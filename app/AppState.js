@@ -5,6 +5,7 @@ import { isValidProp } from "./Utils/isValidProp.js"
 class AppState extends EventEmitter {
   /** @type {Pokemon[]} */
   pokedex = []
+  /** @type {Pokemon[]} */
   myPokemon = []
   activePokemon = null
 }

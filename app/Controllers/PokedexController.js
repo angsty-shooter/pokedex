@@ -4,7 +4,7 @@ import { pokedexService } from "../Services/PokedexService.js"
 function _draw(){
     let pokemon = ProxyState.pokedex
     let template = ""
-    pokemon.forEach(p => template +=`<li class="on-hover" onclick="app.pokemonController.setActivePokemon('${p.index})> ${p.name} </li>`)
+    pokemon.forEach(p => template +=`<li class="on-hover" onclick="app.pokemonController.setActivePokemon('${p.name})> ${p.name} </li>`)
     document.getElementById("pokemonDex").innerHTML = template;
 }
 
@@ -25,8 +25,8 @@ export default class PokedexController{
         _draw()
     }
 
-    setActivePokemon(index){
-        console.log(index)
-        pokedexService.setActivePokemon(index)
+    setActivePokemon(name){
+        console.log(name)
+        pokedexService.setActivePokemon(name)
     }
 }
