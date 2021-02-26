@@ -6,7 +6,6 @@ import { pokeApi } from "./AxiosService.js";
 class PokedexService {
 
     constructor(){
-        console.log("pokedex service")
         this.getPokemon()
     }
 
