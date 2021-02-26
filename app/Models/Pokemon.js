@@ -4,7 +4,7 @@ export default class Pokemon{
         this.index = data.index
         this.id = data.id
         this.name = data.name
-        this.types = data.types
+        this.types = data.types[0].type.name
         this.img = data.img || data.sprites.front_default
         this.weight = data.weight
     }
@@ -18,6 +18,7 @@ export default class Pokemon{
                 <p class="card-text">Type: ${this.types}</p>
                 <p class="card-text">Weight: ${this.weight}</p>
             </div>
+            <button class="btn btn-info" onclick="app.">Capture</button>
         </div>`
     }
 
