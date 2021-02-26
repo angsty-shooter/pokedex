@@ -12,7 +12,6 @@ class PokedexService {
     async getPokemon(){
         try {
             const res = await pokeApi.get("")
-            //console.log(res)
             ProxyState.pokedex = res.data.results
         } catch (error) {
             console.error(error)
