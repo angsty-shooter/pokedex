@@ -20,4 +20,5 @@ export default class Pokemon{
             </div>
         </div>`
     }
+
 }
