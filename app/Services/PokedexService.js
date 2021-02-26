@@ -13,7 +13,6 @@ class PokedexService {
         try {
             const res = await pokeApi.get("")
             ProxyState.pokedex = res.data.results
-            console.log(ProxyState.pokedex)
         } catch (error) {
             console.error(error)
         }
