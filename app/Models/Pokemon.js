@@ -1,6 +1,6 @@
 
 export default class Pokemon{
-    constructor({data}){
+    constructor(data){
         this.name = data.name
         this.types = data.types
         this.img = data.img || data.sprites.front_default
