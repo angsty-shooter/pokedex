@@ -19,9 +19,9 @@ class PokedexService {
         }
     }
 
-     async setActivePokemon(index){
+     async setActivePokemon(name){
          try {
-             const res = await pokeApi.get(index)
+             const res = await pokeApi.get(name)
              ProxyState.activePokemon = new Pokemon(res.data)
          } catch (error) {
             console.error(error)
